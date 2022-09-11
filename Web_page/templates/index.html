@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aila Jaduu</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/backGroundB.css') }}">
+        <link rel="icon" href="{{url_for('static', filename='icon.png')}}" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/bae451b529.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="dispRPiStats">
+            <div>
+                <p style="text-align: center; padding: 0px 0px 18px 0px; color:#c7053d;"><span style="font-size: 30px;"><i class="fa-brands fa-raspberry-pi" style="font-size: 30px;"></i> S</span>tatus</p>
+            </div>
+            <div class="status">
+                <div style="text-align: center; padding: 0px 15px;">
+                    <i class="fa-sharp fa-solid fa-wifi"></i><br>
+                    <i class="fa-solid fa-temperature-three-quarters"></i><br>
+                    <i class="fa-solid fa-microchip"></i><br>
+                    <i class="fa-solid fa-microchip"></i><br>
+                    <i class="fa-solid fa-fan"></i><br>
+                    <i class="fa-solid fa-plug"></i>
+                </div>
+                <div style="padding: 0px 15px 0px 0px;">
+                    <p>
+                        IP address<br>
+                        Device Temp<br>
+                        RAM Usage<br>
+                        CPU Usage<br>
+                        FAN Status<br>
+                        Power Status
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        : <span id="ipAddress">x.x.x.x</span><br>
+                        : <span id="deviceTemp">xx</span> &#176;C<br>
+                        : <span id="ramUse">xx</span> %<br>
+                        : <span id="cpuUse">xx</span> %<br>
+                        : <span id="fanUse">xx</span><br><!--<span style="color:rgb(112, 255, 207);">OFF</span><br>-->
+                        : <span id="powerStats">xx</span><!--<span style="color:rgb(253, 255, 112);">Poor</span>-->
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: center; padding: 18px 0px 18px 0px; color:rgb(43, 213, 255);"><span style="font-size: 30px;"><i class="fa-solid fa-robot" style="font-size: 30px;"></i> D</span>atas</p>
+            </div>
+            <div class="status">
+                <div style="text-align: center; padding: 0px 15px;">
+                    <i class="fa-solid fa-power-off"></i><br>
+                    <i class="fa-solid fa-link"></i><br>
+                    <i class="fa-solid fa-volume-high"></i><br>
+                    <i class="fa-solid fa-video"></i><br>
+                    <i class="fa-solid fa-microphone"></i><br>
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div style="padding: 0px 15px 0px 0px;">
+                    <p>
+                        ROS State<br>
+                        Link Master<br>
+                        Audio<br>
+                        Camera<br>
+                        Microchip<br>
+                        ROS Potential
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        : <span id="rosStats">xx</span><br><!--<span style="color:rgb(255, 117, 112);">OFF</span><br>-->
+                        : <span id="mainLink">xx</span><br><!--<span style="color:rgb(255, 117, 112);">NO</span><br>-->
+                        : <span id="isAudio">xx</span><br><!--<span style="color:rgb(112, 255, 207);">OFF</span><br>-->
+                        : <span id="isCamera">xx</span><br><!--<span style="color:rgb(112, 255, 207);">OFF</span><br>-->
+                        : <span id="isMic">xx</span><br><!--<span style="color:rgb(112, 255, 207);">OFF</span><br>-->
+                        : <span id="rosPotential">xx</span> %
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="{{url_for('static', filename='icon.png')}}" alt="icon">
+        <div class="cc">
+            <p>
+                <span class="ctxt">&#60;&#x2F;&#62;</span> With <span class="ctxt">&#60;3</span> by <span class="ctxt">Sukarna Jana</span>
+            </p>        
+        </div>
+        <div class="area" >
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    </div >
+    </body>
+</html>
+
+<!--
+{% extends "dy0.html" %}
+{% block body %}
+<script type="text/javascript">
+var intervalID = setInterval(update_values,1000);
+
+  function update_values() {
+        $.getJSON($SCRIPT_ROOT + '/_stuff',
+               
+      function(data) {
+        $('#result').text(data.result);
+        console.log(data)
+      });
+      
+    };
+   
+    
+    
+    function stopTextColor() {
+      clearInterval(intervalID);
+    }
+    
+</script>
+<body onload="update_values();">
+<h1>Dynamic Update</h1>
+<p>
+    <span id="result">?</span>
+<script>
+document.getElementById("result").innerHTML;
+</script>
+
+	<button onclick="stopTextColor();">Stop</button>
+	</body>
+{% endblock %}
+-->
